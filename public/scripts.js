@@ -1,7 +1,7 @@
 const SCREEN_DURATION_MS = 8000;
 const WEATHER_REFRESH_MS = 15 * 60 * 1000;
 const EVENTS_REFRESH_MS = 15 * 60 * 1000;
-const EVENTS_TO_SHOW = 3;
+const EVENTS_TO_SHOW = 4;
 const LOCAL_CALENDAR_ICS_URL = "/calendar.ics";
 const LOCAL_CONFIG_URL = "/config.json";
 
@@ -351,7 +351,7 @@ function renderEvents() {
     const when = formatEventDateTime(event.start, event.isAllDay);
     const metaParts = [];
     if (event.location) metaParts.push(event.location);
-    if (event.description) metaParts.push(event.description);
+    // if (event.description) metaParts.push(event.description);
 
     const row = document.createElement("div");
     row.className = "event-row";
